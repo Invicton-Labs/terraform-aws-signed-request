@@ -11,6 +11,18 @@ variable "force_wait_for_apply" {
   default     = false
 }
 
+variable "make_request" {
+  description = "Whether to actually make the signed HTTP request. If this is `false` (default), it will just generate and return the signature, but will not actually make the request."
+  type = bool
+  default = false
+}
+
+variable "region" {
+  description = "The region to sign the request for. Defaults to the region that the Terraform provider is configured in."
+  type        = string
+  default     = null
+}
+
 variable "method" {
   description = "The HTTP method to use for the request."
   type        = string
