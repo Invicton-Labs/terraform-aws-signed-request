@@ -2,6 +2,8 @@
 
 This module creates an AWS v4 signed request. It is intended to be used in conjunction with the [Invicton-Labs/request-signer/aws](https://registry.terraform.io/modules/Invicton-Labs/request-signer/aws/latest) module.
 
+By default, this module only creates the signed request, but does not execute it. Using the `make_request` input parameter, you can optionally execute the request and return the response as well.
+
 ## Basic Usage
 
 ```
